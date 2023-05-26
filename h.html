@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        <style>
+  nav {
+    background-color: #333;
+    overflow: hidden;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav li {
+    font-size: 16px;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  nav img {
+    vertical-align: middle;
+  }
+
+  nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; 
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .search-container input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    background: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 17px;
+    color: black;
+  }
+
+  .search-container button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .adress-form {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .adress-form-menu {
+    padding: 20px;
+  }
+  
+  .adress-form-menu h2 {
+    font: size 20px;
+    font-weight: bold;
+margin-bottom: 10px;
+}
+.adress-form-menu p {
+margin-bottom: 20px;
+}
+
+.adress-form-menu select, .adress-form-menu input[type="text"] {
+display: block;
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: none;
+background-color: #f1f1f1;
+border-radius: 5px;
+}
+
+.adress-form-menu button {
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+padding: 10px;
+cursor: pointer;
+}
+
+.fa-sort-down:before {
+content: "\f0d7";
+font-size: 10px;
+margin-left: 5px;
+}
+
+.fa-magnifying-glass:before {
+content: "\f002";
+font-size: 18px;
+}
+
+.fa-cart-shopping:before {
+content: "\f07a";
+font-size: 18px;
+}
+
+@media (max-width: 400px) {
+nav ul {
+flex-wrap: wrap;
+}
+
+nav li {
+  flex-grow: unset;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px;
+}
+
+.search-container {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.search-container input[type=text] {
+  width: calc(100% - 40px);
+}
+
+.search-container button {
+  position: static;
+  margin-left: 5px;
+}
+
+#adress-form {
+  display: none;
+}
+
+.adress-form {
+  position: static;
+  width: 100%;
+  top: auto;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.adress-form-menu {
+  padding: 10px;
+}
+
+.adress-form-menu h2 {
+  font-size: 16px;
+}
+
+.adress-form-menu select, .adress-form-menu input[type="text"] {
+  margin-bottom: 5px;
+}
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+          <ul>
+            <li><a href="trangchu.html"><img style="width: 130px;height: 61px;" src="Cong man store.png" alt=""></a></li>
+            <li id="adress-form"><a href="#">Tp.HCM<i class="fa-solid fa-sort-down"></i></a>
+              <div class="adress-form">
+                <div class="adress-form-menu">
+                  <h2>Chọn địa chỉ nhận hàng <span id="adress-form-close">X Đóng</span></h2>
+                  <form action="">
+                    <p>Chọn đầy đủ địa chỉ nhận hàng để biết chính xác thời gian giao</p>
+                    <select name="" id="">
+                      <option value="#">--Chọn địa điểm</option>
+                      <option value="#">--Chọn địa điểm</option>
+                    </select>
+                    <select name="" id="">
+                      <option value="#">--Chọn Quận\Huyện</option>
+                      <option value="#">--Chọn địa điểm</option>
+                    </select>
+                    <select name="" id="">
+                      <option value="#">--Chọn Phường\Xã</option>
+                      <option value="#">--Chọn địa điểm</option>
+                    </select>
+                    <input type="text" placeholder="Số nhà, Tên đường">
+                    <button>Xác nhận</button>
+                  </form>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="search-container">
+                <input type="text" placeholder="Bạn tìm gì..." name="search">
+                <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </li>
+            <li><a href="giohang.html"><button><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</button></a></li>
+            <li><a href="dangnhap.html">Tài khoản & Đơn hàng</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="trangchu.html">Hỏi đáp</a></li>
+            <li><a href="trangchu.html">Game App</a></li>
+          </ul>
+        </div>
+      </nav>
+    </body>
+</html>
